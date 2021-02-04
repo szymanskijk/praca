@@ -24,8 +24,8 @@ public class ProductManager {
         return productRepo.findAll();
     }
 
-    public Product save(Product client){
-        return productRepo.save(client);
+    public Product save(Product product){
+        return productRepo.save(product);
     }
 
     public void deleteById(Long id){

@@ -29,17 +29,17 @@ public class ProductApi {
     }
 
     @PostMapping
-    public Product addClient(@RequestBody Product product){
+    public Product addProduct(@RequestBody Product product){
         return productManager.save(product);
     }
 
     @PutMapping
-    public Product updateClient(@RequestBody Product product){
+    public Product updateProduct(@RequestBody Product product){
         return productManager.save(product);
     }
 
     @DeleteMapping
-    public void deleteClient(@RequestParam Long id){
+    public void deleteProduct(@RequestParam Long id){
         productManager.deleteById(id);
     }
 
