@@ -39,11 +39,11 @@ public class ClientManager {
         clientRepo.deleteById(id);
     }
 
-    public List<Client> getClientByOrderre(String id){
-        List<Client> clients = new ArrayList<>();
-        clientRepo.findByOrderreId(id).forEach(clients::add);
-        return clients;
-    }
+//    public List<Client> getClientByOrderre(String id){
+//        List<Client> clients = new ArrayList<>();
+//        clientRepo.findByOrderreId(id).forEach(clients::add);
+//        return clients;
+//    }
 
     @EventListener(ApplicationReadyEvent.class)
     public void fillDB(){

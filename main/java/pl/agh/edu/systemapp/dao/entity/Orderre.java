@@ -16,16 +16,15 @@ public class Orderre {
 
     @Temporal(TemporalType.DATE)
     private Date orderDate = new Date();
-
-    @ManyToOne
-    @JoinColumn(name = "client_id")
-    private Client client;
+    private Long clientId;
+    private Long crewId;
 
     public Orderre() {
     }
 
-    public Orderre(Client client) {
-        this.client = client;
+    public Orderre(Long clientId, Long crew_id) {
+        this.clientId = clientId;
+        this.crewId = crew_id;
     }
 
     public Long getId() {
@@ -44,11 +43,19 @@ public class Orderre {
         this.orderDate = orderDate;
     }
 
-    public Client getClient() {
-        return client;
+    public Long getClientId() {
+        return clientId;
     }
 
-    public void setClient(Client client) {
-        this.client = client;
+    public void setClientId(Long clientId) {
+        this.clientId = clientId;
+    }
+
+    public Long getCrewId() {
+        return crewId;
+    }
+
+    public void setCrewId(Long crew_id) {
+        this.crewId = crew_id;
     }
 }

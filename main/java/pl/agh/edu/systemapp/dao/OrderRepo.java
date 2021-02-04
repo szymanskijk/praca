@@ -9,5 +9,5 @@ import java.util.List;
 
 @Repository
 public interface OrderRepo extends CrudRepository<Orderre, Long> {
-    public List<Orderre> findByClientId(String clientId);
+    public List<Orderre> findByClientId(Long clientId);
 }

@@ -8,6 +8,4 @@ import java.util.List;
 
 @Repository
 public interface ClientRepo extends CrudRepository<Client, Long> {
-
-    public List<Client> findByOrderreId(String orderreID);
 }

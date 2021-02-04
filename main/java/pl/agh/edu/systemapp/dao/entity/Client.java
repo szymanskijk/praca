@@ -16,9 +16,6 @@ public class Client {
     private Integer phoneNumber;
     private String email;
 
-    @OneToMany(mappedBy = "Client")
-    private List<Orderre> orderre;
-
     public Client() {
     }
 

@@ -29,17 +29,21 @@ public class OrderreApi {
     }
 
     @PostMapping
-    public Orderre addClient(@RequestBody Orderre order){
+    public Orderre addOrderre(@RequestBody Orderre order){
         return orderManager.save(order);
     }
 
     @PutMapping
-    public Orderre updateClient(@RequestBody Orderre order){
+    public Orderre updateOrderre(@RequestBody Orderre order){
         return orderManager.save(order);
     }
 
     @DeleteMapping
-    public void deleteClient(@RequestParam Long id){
+    public void deleteOrderre(@RequestParam Long id){
         orderManager.deleteById(id);
     }
+
+    @GetMapping("/clientid")
+    public Iterable<Orderre> getByClientId(@RequestParam Long id) { return orderManager.getOrderreByClient(id);}
+
 }
