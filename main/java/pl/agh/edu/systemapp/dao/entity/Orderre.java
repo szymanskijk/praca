@@ -17,7 +17,8 @@ public class Orderre {
     @Temporal(TemporalType.DATE)
     private Date orderDate = new Date();
 
-    @ManyToOne(cascade = CascadeType.MERGE)
+    @ManyToOne
+    @JoinColumn(name = "client_id")
     private Client client;
 
     public Orderre() {

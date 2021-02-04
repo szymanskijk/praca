@@ -1,6 +1,7 @@
 package pl.agh.edu.systemapp.dao.entity;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Client {
@@ -15,8 +16,8 @@ public class Client {
     private Integer phoneNumber;
     private String email;
 
-    @ManyToOne
-    private Orderre orderre;
+    @OneToMany(mappedBy = "Client")
+    private List<Orderre> orderre;
 
     public Client() {
     }
